@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Booking - Resort Booking System</title>
+</head>
+<body>
+    <h1>Client Booking - Resort Booking System</h1>
+    
+    <h2>Make a Reservation</h2>
+    <form action="/client/makeReservation" method="post">
+        <input type="hidden" name="action" value="makeReservation">
+        <label for="guestName">Your Name:</label>
+        <input type="text" id="guestName" name="guestName" required><br>
+        <label for="tourId">Tour ID:</label>
+        <input type="text" id="tourId" name="tourId" required><br>
+        <label for="arrival">Arrival Date:</label>
+        <input type="date" id="arrival" name="arrival" required><br>
+        <label for="departure">Departure Date:</label>
+        <input type="date" id="departure" name="departure" required><br>
+        <input type="submit" value="Make Reservation">
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Resort Booking System</title>
+</head>
+<body>
+    <h1>Admin Panel - Resort Booking System</h1>
+    
+    <h2>Add New Tour</h2>
+    <form action="/admin/addTour" method="post">
+        <input type="hidden" name="action" value="addTour">
+        <label for="id">Tour ID:</label>
+        <input type="text" id="id" name="id" required><br>
+        <label for="name">Tour Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required><br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br>
+        <label for="capacity">Capacity:</label>
+        <input type="number" id="capacity" name="capacity" required><br>
+        <label for="apiKey">API Key:</label>
+        <input type="password" id="apiKey" name="apiKey" required><br>
+        <input type="submit" value="Add Tour">
+    </form>
+
+    <h2>Remove Tour</h2>
+    <form action="/admin/removeTour" method="post">
+        <input type="hidden" name="action" value="removeTour">
+        <label for="tourId">Tour ID:</label>
+        <input type="text" id="tourId" name="tourId" required><br>
+        <label for="apiKeyRemove">API Key:</label>
+        <input type="password" id="apiKeyRemove" name="apiKey" required><br>
+        <input type="submit" value="Remove Tour">
+    </form>
+</body>
+</html>
